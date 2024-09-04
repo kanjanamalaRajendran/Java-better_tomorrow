@@ -1,0 +1,17 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int array[]={0,1,2,0,1,3};
+        int n=array.length;
+        int order= new int[array.length];
+        for(int i=0;i<n;i++){
+            if(array[i]>0){
+                order[j]=array[i];
+                j++;
+            }
+        }
+        System.out.println(order[i]);
+    }
+}

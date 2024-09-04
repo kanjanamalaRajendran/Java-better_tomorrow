@@ -1,0 +1,39 @@
+interface Principal{
+     String getClgDetail();
+}
+interface Management{
+     public int getSalary();
+}
+abstract class Staff implements Principal,Management{
+    public String getClgDetail(){
+        return "Detail";
+    }                             //this method  override below so it can't create abject  can't print the method values 
+    public int getSalary(){
+        return 23451;
+    }
+}
+class Hod extends Staff{
+    public String getClgDetail(){
+    return "feesdivision known";
+    }
+    public int getSalary(){
+    return 80000;
+    }
+}
+
+class Advisor extends Hod{
+     public String getClgDetail(){
+        return "feesdivision can't known";
+    }
+    public int getSalary(){
+        return 45000;
+    }
+    public static void main(String []args){
+        Hod obj2 = new Hod();
+        System.out.println("HOD: "+obj2.getClgDetail());
+        System.out.println("HOD salary: "+obj2.getSalary());
+        Advisor obj3=new Advisor();
+        System.out.println("Advisor : " +obj3.getClgDetail());
+        System.out.println("Advisor salary: " +obj3.getSalary());
+    }
+}
